@@ -4,31 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aboriginal Berean Community Church</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#1e3a8a',
-                        secondary: '#1e40af',
-                        leaf: {
-                            50: '#eff6ff',
-                            100: '#dbeafe',
-                            200: '#bfdbfe',
-                            300: '#93c5fd',
-                            400: '#60a5fa',
-                            500: '#3b82f6',
-                            600: '#2563eb',
-                            700: '#1d4ed8',
-                            800: '#1e40af',
-                            900: '#1e3a8a',
-                            950: '#172554',
-                        }
+                        sect: '#d3d3d3', //color of middle section 
+
+//palette options
+        clay: {
+          50:  '#fdf6f0',
+          100: '#f7e8db',
+          200: '#eed0b8',
+          300: '#e4b08f',
+          400: '#d6956f',
+          500: '#c77a52',
+          600: '#a96242',
+          700: '#874d35',
+          800: '#6a3b2a',
+          900: '#4e2a1f',
+        },
+        ember: {
+          50:  '#fffdf7',
+          100: '#fef9e7',
+          200: '#fdf3cf',
+          300: '#fbe9b0',
+          400: '#f7dc8e',
+          500: '#f2c76b',
+          600: '#d4a955',
+          700: '#b28a43',
+          800: '#8f6c33',
+          900: '#6c4f25',
+        },
+        sand: {
+          50:  '#fff5f2',
+          100: '#ffe3db',
+          200: '#ffc8bb',
+          300: '#ffa08f',
+          400: '#ff7a66',
+          500: '#f95c4c',
+          600: '#d7433b',
+          700: '#b2322d',
+          800: '#8e241f',
+          900: '#6a1814',
+        },
+        dusk: {
+          50:  '#f9f5f7',
+          100: '#f0e6eb',
+          200: '#d9cbd6',
+          300: '#c1aebf',
+          400: '#a88fa7',
+          500: '#8e728f',
+          600: '#755a75',
+          700: '#5c465d',
+          800: '#443346',
+          900: '#2d212f',
+        },
+        leaf: {
+          50:  '#f3f8f3',
+          100: '#e1f0e1',
+          200: '#c6e0c6',
+          300: '#a4cfa4',
+          400: '#7fbc7f',
+          500: '#5aa95a',
+          600: '#448944',
+          700: '#336933',
+          800: '#245024',
+          900: '#163716',
+        },
+        live: { //to change color replace this element with the color palette to use
+          50:  '#fdf6f0',
+          100: '#f7e8db',
+          200: '#eed0b8',
+          300: '#e4b08f',
+          400: '#d6956f',
+          500: '#c77a52',
+          600: '#a96242',
+          700: '#874d35',
+          800: '#6a3b2a',
+          900: '#4e2a1f',           
+        },
                     }
                 }
             }
@@ -36,7 +92,8 @@
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body class="bg-leaf-50">
+<body class="bg-live text-live">
+
     <!-- Navigation -->
     <nav class="bg-white/30 backdrop-blur shadow-lg fixed w-full z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,26 +102,26 @@
                     <img src="ABCCLogo.svg" alt="Aboriginal Berean Community Church" class="h-12 w-auto" />
                 </div>
                 <div class="hidden md:flex items-center space-x-2">
-                    <a href="#home" class="px-3 py-2 rounded-md text-gray-500 hover:text-primary hover:bg-white/40 transition duration-300">Home</a>
-                    <a href="#services" class="px-3 py-2 rounded-md text-gray-500 hover:text-primary hover:bg-white/40 transition duration-300">Services</a>
-                    <a href="#about" class="px-3 py-2 rounded-md text-gray-500 hover:text-primary hover:bg-white/40 transition duration-300">About</a>
-                    <a href="#connect" class="px-3 py-2 rounded-md text-gray-500 hover:text-primary hover:bg-white/40 transition duration-300">Connect</a>
+                    <a href="#home" class="px-3 py-2 rounded-md text-white-500 hover:text-live hover:bg-white/40 transition duration-300">Home</a>
+                    <a href="#services" class="px-3 py-2 rounded-md text-white-500 hover:text-live hover:bg-white/40 transition duration-300">Services</a>
+                    <a href="#about" class="px-3 py-2 rounded-md text-white-500 hover:text-live hover:bg-white/40 transition duration-300">About</a>
+                    <a href="#connect" class="px-3 py-2 rounded-md text-white-500 hover:text-live hover:bg-white/40 transition duration-300">Connect</a>
                 </div>
                 <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-button" class="text-gray-700 hover:text-primary">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-live">
                         <i class="fas fa-bars text-xl"></i>
                     </button>
                 </div>
             </div>
         </div>
         <!-- Mobile menu -->
-        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+        <div id="mobile-menu" class="md:hidden hidden bg-white/40 border-t">
             <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="#home" class="block px-3 py-2 rounded-md text-gray-500 hover:text-primary hover:bg-gray-100">Home</a>
-                <a href="#services" class="block px-3 py-2 rounded-md text-gray-500 hover:text-primary hover:bg-gray-100">Services</a>
-                <a href="#about" class="block px-3 py-2 rounded-md text-gray-500 hover:text-primary hover:bg-gray-100">About</a>
-                <a href="#connect" class="block px-3 py-2 rounded-md text-gray-500 hover:text-primary hover:bg-gray-100">Connect</a>
+                <a href="#home" class="block px-3 py-2 rounded-md text-gray-500 hover:text-live hover:bg-gray-100">Home</a>
+                <a href="#services" class="block px-3 py-2 rounded-md text-gray-500 hover:text-live hover:bg-gray-100">Services</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-gray-500 hover:text-live hover:bg-gray-100">About</a>
+                <a href="#connect" class="block px-3 py-2 rounded-md text-gray-500 hover:text-live hover:bg-gray-100">Connect</a>
             </div>
         </div>
     </nav>
@@ -73,7 +130,7 @@
     <section id="home" class="relative text-white">
         <div class="absolute inset-0">
             <img src="heroABCC.jpg" alt="Aboriginal Berean" class="w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-leaf-800/70"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-live-900/70 to-live-700/50"></div>
         </div>
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20">
             <div class="text-center">
@@ -84,10 +141,10 @@
                     Join us Sunday nights, 5:30pm. We are an evangelical Aboriginal church with a deep love for God, the Bible, and our community.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#services" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition duration-300">
+                    <a href="#services" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/40 hover:text-live-900 transition duration-300">
                         Our Services
                     </a>
-                    <a href="#connect" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition duration-300">
+                    <a href="#connect" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/40 hover:text-live-900 transition duration-300">
                         Get Directions
                     </a>
                 </div>
@@ -96,10 +153,10 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-20 bg-[#cfd0d1]">
+    <section id="services" class="py-20 bg-sect">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our life together</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">How we serve</h2>
                 <p class="text-xl text-gray-600 max-w-2xl mx-auto">
                     Worship, Community, and Service are core to our church life.
                 </p>
@@ -107,8 +164,8 @@
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Sunday Services -->
-                <div class="bg-white rounded-lg p-8 text-center hover:shadow-lg transition duration-300 border border-leaf-200">
-                    <div class="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <div class="bg-white rounded-lg p-8 text-center hover:bg-gray-100 duration-300 border border-live-200">
+                    <div class="bg-live-700 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-church text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-4">Sunday Services</h3>
@@ -117,8 +174,8 @@
                 </div>
 
                 <!-- Community Groups -->
-                <div class="bg-white rounded-lg p-8 text-center hover:shadow-lg transition duration-300 border border-leaf-200">
-                    <div class="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <div class="bg-white rounded-lg p-8 text-center hover:bg-gray-100 transition duration-300 border border-live-200">
+                    <div class="bg-live-700 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-users text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-4">Community</h3>
@@ -126,8 +183,8 @@
                 </div>
 
                 <!-- Serve -->
-                <div class="bg-white rounded-lg p-8 text-center hover:shadow-lg transition duration-300 border border-leaf-200">
-                    <div class="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <div class="bg-white rounded-lg p-8 text-center hover:bg-gray-100 transition duration-300 border border-live-200">
+                    <div class="bg-live-700 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-hands-helping text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-4">Serve</h3>
@@ -140,15 +197,15 @@
     <!-- About Section -->
     <section id="about" class="relative overflow-hidden pt-0 pb-20 bg-[#cfd0d1]">
         <div class="absolute inset-0 z-0">
-            <img src="Banner.svg" alt="Decorative banner" class="w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-black/55"></div>
+            <img src="Banner.svg" alt="ABCC church building" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-black/80"></div>
         </div>
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="hidden md:block relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen h-[250px] mb-10 reveal-on-view opacity-0 translate-y-3 transition-all duration-700">
                 <img src="ABCC.png" alt="Aboriginal Berean Community Church" class="w-full h-full object-cover" />
             </div>
                 <div class="reveal-on-view opacity-0 translate-y-3 transition-all duration-700">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 pt-2">About Us</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">About Us</h2>
                    
                     <p class="text-lg text-gray-100 mb-8">
                         We acknowledge the land we worship on is the Traditional Lands of the Kaurna People. We respect their spiritual and ancestral relationship with their Country. We also acknowledge and recognise the Kaurna People as the right and God's chosen custodians and caretaker of the Adelaide region and that their cultural and heritage beliefs are still as important to the living Kaurna people today.
@@ -159,7 +216,7 @@
     </section>
 
     <!-- Connect Section -->
-    <section id="connect" class="py-20 bg-leaf-50">
+    <section id="connect" class="py-20 bg-live-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">We'd love to connect with you.</h2>
@@ -168,64 +225,64 @@
             <div class="grid lg:grid-cols-2 gap-12">
                 <!-- Contact Information -->
                 <div class="space-y-8">
-                    <div class="bg-white rounded-lg p-8 border border-leaf-200">
-                        <h3 class="text-2xl font-semibold mb-6 text-primary">Contact Information</h3>
+                    <div class="bg-white rounded-lg p-8 border border-live-200">
+                        <h3 class="text-2xl font-semibold mb-6 text-live-700">Contact Information</h3>
                         
                         <div class="space-y-6">
                             <div class="flex items-center">
-                                <div class="bg-primary text-white rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                                <div class="bg-live-700 text-white rounded-full w-12 h-12 flex items-center justify-center mr-4">
                                     <i class="fas fa-envelope"></i>
                                 </div>
                                 <div>
                                     <h4 class="font-semibold text-gray-900">Email</h4>
-                                    <p class="text-gray-600"><a href="mailto:info@aboriginalberean.au">info@aboriginalberean.au</a></p>
+                                    <p class="text-live-600"><a href="mailto:info@aboriginalberean.au">info@aboriginalberean.au</a></p>
                                 </div>
                             </div>
                             
                             <div class="flex items-center">
-                                <div class="bg-primary text-white rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                                <div class="bg-live-700 text-white rounded-full w-12 h-12 flex items-center justify-center mr-4">
                                     <i class="fab fa-facebook"></i>
                                 </div>
                                 <div>
                                     <h4 class="font-semibold text-gray-900">Facebook</h4>
-                                    <a href="https://www.facebook.com/aboriginalberean" class="text-blue-600 hover:text-blue-800">Follow us on Facebook</a>
+                                    <a href="https://www.facebook.com/aboriginalberean" class="text-live-600 hover:text-blue-800">Follow us on Facebook</a>
                                 </div>
                             </div>
                             
                             <div class="flex items-center">
-                                <div class="bg-primary text-white rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                                <div class="bg-live-700 text-white rounded-full w-12 h-12 flex items-center justify-center mr-4">
                                     <i class="fab fa-youtube"></i>
                                 </div>
                                 <div>
                                     <h4 class="font-semibold text-gray-900">YouTube</h4>
-                                    <a href="https://www.youtube.com/@aboriginalbereanchurch" class="text-red-600 hover:text-red-800">Subscribe on YouTube</a>
+                                    <a href="https://www.youtube.com/@aboriginalbereanchurch" class="text-live-600 hover:text-red-800">Subscribe on YouTube</a>
                                 </div>
                             </div>
 
                             <div class="flex items-center">
-                                <div class="bg-primary text-white rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                                <div class="bg-live-700 text-white rounded-full w-12 h-12 flex items-center justify-center mr-4">
                                     <i class="fab fa-instagram"></i>
                                 </div>
                                 <div>
                                     <h4 class="font-semibold text-gray-900">Instagram</h4>
-                                    <a href="https://www.instagram.com/aboriginalberean" class="text-pink-600 hover:text-pink-800">Find us on Instagram</a>
+                                    <a href="https://www.instagram.com/aboriginalberean" class="text-live-600 hover:text-pink-800">Find us on Instagram</a>
                                 </div>
                             </div>
 
                             <div class="flex items-center">
-                                <div class="bg-primary text-white rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                                <div class="bg-live-700 text-white rounded-full w-12 h-12 flex items-center justify-center mr-4">
                                     <i class="fas fa-map-marker-alt"></i>
                                 </div>
                                 <div>
                                     <h4 class="font-semibold text-gray-900">Address</h4>
-                                    <p class="text-gray-600"><a href="https://goo.gl/maps/YrLcSD4miJAAXB9r8">30 Stroud Street S, Cheltenham</a></p>
+                                    <p class="text-live-600"><a href="https://goo.gl/maps/YrLcSD4miJAAXB9r8">30 Stroud Street S, Cheltenham</a></p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-lg p-8 border border-leaf-200">
-                        <h3 class="text-2xl font-semibold mb-6 text-primary">Partnerships</h3>
+                    <div class="bg-white rounded-lg p-8 border border-live-200">
+                        <h3 class="text-2xl font-semibold mb-6 text-live-700">Partnerships</h3>
                         <div class="space-y-2 text-gray-600">
                             <p>The Aboriginal Berean Community Church is a member of the <a href="https://bcsant.org.au/" class="underline hover:text-blue-600">Baptist Churches of SA & NT</a>, and <a href="https://aef.org.au/" class="underline hover:text-blue-600">Aboriginal Evangelical Fellowship</a>.</p>
                         </div>
@@ -233,9 +290,9 @@
                 </div>
 
                 <!-- Google Map -->
-                <div class="bg-white rounded-lg p-8 border border-leaf-200">
-                    <h3 class="text-2xl font-semibold mb-6 text-primary">Find Us</h3>
-                    <div class="bg-leaf-200 rounded-lg h-96 flex items-center justify-center">
+                <div class="bg-white rounded-lg p-8 border border-live-200">
+                    <h3 class="text-2xl font-semibold mb-6 text-live-700">Find Us</h3>
+                    <div class="bg-live-200 rounded-lg h-96 flex items-center justify-center">
                         <iframe 
                             src="https://www.google.com/maps?q=30+Stroud+Street+S,+Cheltenham+SA&output=embed"
                             width="100%" 
@@ -253,23 +310,23 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-leaf-900 text-white py-12 opacity-0 translate-y-4 transition-opacity transition-transform duration-700">
+    <footer class="bg-live-900 text-white py-12 opacity-0 translate-y-4 transition-opacity transition-transform duration-700">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-3 gap-8">
                 <div>
                     <h3 class="text-2xl font-bold mb-4 reveal-on-view opacity-0 translate-y-2 transition-all duration-700">Aboriginal Berean Community Church</h3>
-                    <p class="text-leaf-300 mb-4 reveal-on-view opacity-0 translate-y-2 transition-all duration-700">We glorify God as we serve our people and all Australians.</p>
+                    <p class="text-live-300 mb-4 reveal-on-view opacity-0 translate-y-2 transition-all duration-700">We glorify God as we serve our people and all Australians.</p>
                     <div class="flex space-x-4 reveal-on-view opacity-0 translate-y-2 transition-all duration-700">
-                        <a href="https://www.facebook.com/aboriginalberean" class="text-leaf-300 hover:text-white transition duration-300"><i class="fab fa-facebook text-xl"></i></a>
-                        <a href="https://www.youtube.com/@aboriginalbereanchurch" class="text-leaf-300 hover:text-white transition duration-300"><i class="fab fa-youtube text-xl"></i></a>
-                        <a href="https://www.instagram.com/aboriginalberean" class="text-leaf-300 hover:text-white transition duration-300"><i class="fab fa-instagram text-xl"></i></a>
-                        <a href="mailto:info@aboriginalberean.au" class="text-leaf-300 hover:text-white transition duration-300"><i class="fas fa-envelope text-xl"></i></a>
+                        <a href="https://www.facebook.com/aboriginalberean" class="text-live-300 hover:text-white transition duration-300"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="https://www.youtube.com/@aboriginalbereanchurch" class="text-live-300 hover:text-white transition duration-300"><i class="fab fa-youtube text-xl"></i></a>
+                        <a href="https://www.instagram.com/aboriginalberean" class="text-live-300 hover:text-white transition duration-300"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="mailto:info@aboriginalberean.au" class="text-live-300 hover:text-white transition duration-300"><i class="fas fa-envelope text-xl"></i></a>
                     </div>
                 </div>
                 
                 <div>
                     <h4 class="text-lg font-semibold mb-4 reveal-on-view opacity-0 translate-y-2 transition-all duration-700">CHILD PROTECTION PRIORITY</h4>
-                    <div class="space-y-3 text-leaf-300 reveal-on-view opacity-0 translate-y-2 transition-all duration-700">
+                    <div class="space-y-3 text-live-300 reveal-on-view opacity-0 translate-y-2 transition-all duration-700">
                         <p>All leadership, staff, children and youth ministry volunteers comply with the Working with Children Check and have completed <a href="https://childprotectionsolutions.com.au/" class="underline hover:text-white">Child Protection Training.</a></p>
                         <p>Information regarding making a National Redress Scheme claim is available <a href="https://www.nationalredress.gov.au/make-a-claim" class="underline hover:text-white">here</a>.</p>
                     </div>
@@ -281,7 +338,7 @@
                 </div>
             </div>
             
-            <div class="border-t border-leaf-700 mt-8 pt-8 text-center text-leaf-300">
+            <div class="border-t border-live-700 mt-8 pt-8 text-center text-live-300">
                 <p class="mb-4 reveal-on-view opacity-0 translate-y-2 transition-all duration-700">We acknowledge the land we worship on are the Traditional Lands of the Kaurna People.</p>
                 <p class="reveal-on-view opacity-0 translate-y-2 transition-all duration-700">&copy; 2025 Aboriginal Berean Community Church. All rights reserved.</p>
             </div>
@@ -328,11 +385,11 @@
             });
 
             navLinks.forEach(link => {
-                link.classList.remove('text-primary');
+                link.classList.remove('text-live-700', 'bg-white/40');
                 link.classList.add('text-gray-700');
                 if (link.getAttribute('href') === `#${current}`) {
                     link.classList.remove('text-gray-700');
-                    link.classList.add('text-primary');
+                    link.classList.add('text-live-700', 'bg-white/40');
                 }
             });
         });
@@ -382,10 +439,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
